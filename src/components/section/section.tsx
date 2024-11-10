@@ -6,6 +6,7 @@ type SectionProps = {
   title: string;
   subtitle?: string;
   minHeight?: boolean;
+  id?: string;
   children: React.ReactNode;
 };
 
@@ -14,10 +15,12 @@ export function Section({
   title,
   subtitle,
   minHeight = true,
+  id,
   children,
 }: SectionProps) {
   return (
     <section
+      id={id}
       className={clsx("container", styles["section"])}
       style={{ minHeight: minHeight ? "100vh" : "auto" }}
     >

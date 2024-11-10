@@ -5,7 +5,7 @@ import styles from "./skills.module.css";
 
 export function Skills() {
   return (
-    <Section number="02" title="Skills">
+    <Section id="skills" number="02" title="Skills">
       <div className={clsx("grid", styles["skills"])}>
         {skills.map((skill, i) => (
           <div className={clsx("col-3", styles["skill-container"])} key={i}>

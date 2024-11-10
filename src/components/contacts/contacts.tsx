@@ -6,6 +6,7 @@ import { SplitTextReveal } from "@/libs/text-animations/components/split-text-re
 export function Contacts() {
   return (
     <Section
+      id="contacts"
       number="04"
       title="Want to work toghether?"
       subtitle="Send me a message"
