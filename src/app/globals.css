@@ -1,0 +1,427 @@
+body {
+  --foreground-color: black;
+  --background-color: #fbefe3;
+
+  color: var(--foreground-color);
+  background: var(--background-color);
+  font-family: "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(var(--columns, 12), 1fr);
+  grid-template-rows: repeat(var(--rows, 1), 1fr);
+}
+
+.grid .col-1 {
+  grid-column: auto/span 1;
+}
+
+.grid .col-2 {
+  grid-column: auto/span 2;
+}
+
+.grid .col-3 {
+  grid-column: auto/span 3;
+}
+
+.grid .col-4 {
+  grid-column: auto/span 4;
+}
+
+.grid .col-5 {
+  grid-column: auto/span 5;
+}
+
+.grid .col-6 {
+  grid-column: auto/span 6;
+}
+
+.grid .col-7 {
+  grid-column: auto/span 7;
+}
+
+.grid .col-8 {
+  grid-column: auto/span 8;
+}
+
+.grid .col-9 {
+  grid-column: auto/span 9;
+}
+
+.grid .col-10 {
+  grid-column: auto/span 10;
+}
+
+.grid .col-11 {
+  grid-column: auto/span 11;
+}
+
+.grid .col-12 {
+  grid-column: auto/span 12;
+}
+
+.grid .start-1 {
+  grid-column-start: 1;
+}
+
+.grid .start-2 {
+  grid-column-start: 2;
+}
+
+.grid .start-3 {
+  grid-column-start: 3;
+}
+
+.grid .start-4 {
+  grid-column-start: 4;
+}
+
+.grid .start-5 {
+  grid-column-start: 5;
+}
+
+.grid .start-6 {
+  grid-column-start: 6;
+}
+
+.grid .start-7 {
+  grid-column-start: 7;
+}
+
+.grid .start-8 {
+  grid-column-start: 8;
+}
+
+.grid .start-9 {
+  grid-column-start: 9;
+}
+
+.grid .start-10 {
+  grid-column-start: 10;
+}
+
+.grid .start-11 {
+  grid-column-start: 11;
+}
+
+@media (min-width: 768px) {
+  .grid .col-md-1 {
+    grid-column: auto/span 1;
+  }
+
+  .grid .col-md-2 {
+    grid-column: auto/span 2;
+  }
+
+  .grid .col-md-3 {
+    grid-column: auto/span 3;
+  }
+
+  .grid .col-md-4 {
+    grid-column: auto/span 4;
+  }
+
+  .grid .col-md-5 {
+    grid-column: auto/span 5;
+  }
+
+  .grid .col-md-6 {
+    grid-column: auto/span 6;
+  }
+
+  .grid .col-md-7 {
+    grid-column: auto/span 7;
+  }
+
+  .grid .col-md-8 {
+    grid-column: auto/span 8;
+  }
+
+  .grid .col-md-9 {
+    grid-column: auto/span 9;
+  }
+
+  .grid .col-md-10 {
+    grid-column: auto/span 10;
+  }
+
+  .grid .col-md-11 {
+    grid-column: auto/span 11;
+  }
+
+  .grid .col-md-12 {
+    grid-column: auto/span 12;
+  }
+
+  .grid .start-md-1 {
+    grid-column-start: 1;
+  }
+
+  .grid .start-md-2 {
+    grid-column-start: 2;
+  }
+
+  .grid .start-md-3 {
+    grid-column-start: 3;
+  }
+
+  .grid .start-md-4 {
+    grid-column-start: 4;
+  }
+
+  .grid .start-md-5 {
+    grid-column-start: 5;
+  }
+
+  .grid .start-md-6 {
+    grid-column-start: 6;
+  }
+
+  .grid .start-md-7 {
+    grid-column-start: 7;
+  }
+
+  .grid .start-md-8 {
+    grid-column-start: 8;
+  }
+
+  .grid .start-md-9 {
+    grid-column-start: 9;
+  }
+
+  .grid .start-md-10 {
+    grid-column-start: 10;
+  }
+
+  .grid .start-md-11 {
+    grid-column-start: 11;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid .col-lg-1 {
+    grid-column: auto/span 1;
+  }
+
+  .grid .col-lg-2 {
+    grid-column: auto/span 2;
+  }
+
+  .grid .col-lg-3 {
+    grid-column: auto/span 3;
+  }
+
+  .grid .col-lg-4 {
+    grid-column: auto/span 4;
+  }
+
+  .grid .col-lg-5 {
+    grid-column: auto/span 5;
+  }
+
+  .grid .col-lg-6 {
+    grid-column: auto/span 6;
+  }
+
+  .grid .col-lg-7 {
+    grid-column: auto/span 7;
+  }
+
+  .grid .col-lg-8 {
+    grid-column: auto/span 8;
+  }
+
+  .grid .col-lg-9 {
+    grid-column: auto/span 9;
+  }
+
+  .grid .col-lg-10 {
+    grid-column: auto/span 10;
+  }
+
+  .grid .col-lg-11 {
+    grid-column: auto/span 11;
+  }
+
+  .grid .col-lg-12 {
+    grid-column: auto/span 12;
+  }
+
+  .grid .start-lg-1 {
+    grid-column-start: 1;
+  }
+
+  .grid .start-lg-2 {
+    grid-column-start: 2;
+  }
+
+  .grid .start-lg-3 {
+    grid-column-start: 3;
+  }
+
+  .grid .start-lg-4 {
+    grid-column-start: 4;
+  }
+
+  .grid .start-lg-5 {
+    grid-column-start: 5;
+  }
+
+  .grid .start-lg-6 {
+    grid-column-start: 6;
+  }
+
+  .grid .start-lg-7 {
+    grid-column-start: 7;
+  }
+
+  .grid .start-lg-8 {
+    grid-column-start: 8;
+  }
+
+  .grid .start-lg-9 {
+    grid-column-start: 9;
+  }
+
+  .grid .start-lg-10 {
+    grid-column-start: 10;
+  }
+
+  .grid .start-lg-11 {
+    grid-column-start: 11;
+  }
+}
+
+@media (min-width: 1440px) {
+  .grid .col-xl-1 {
+    grid-column: auto/span 1;
+  }
+
+  .grid .col-xl-2 {
+    grid-column: auto/span 2;
+  }
+
+  .grid .col-xl-3 {
+    grid-column: auto/span 3;
+  }
+
+  .grid .col-xl-4 {
+    grid-column: auto/span 4;
+  }
+
+  .grid .col-xl-5 {
+    grid-column: auto/span 5;
+  }
+
+  .grid .col-xl-6 {
+    grid-column: auto/span 6;
+  }
+
+  .grid .col-xl-7 {
+    grid-column: auto/span 7;
+  }
+
+  .grid .col-xl-8 {
+    grid-column: auto/span 8;
+  }
+
+  .grid .col-xl-9 {
+    grid-column: auto/span 9;
+  }
+
+  .grid .col-xl-10 {
+    grid-column: auto/span 10;
+  }
+
+  .grid .col-xl-11 {
+    grid-column: auto/span 11;
+  }
+
+  .grid .col-xl-12 {
+    grid-column: auto/span 12;
+  }
+
+  .grid .start-xl-1 {
+    grid-column-start: 1;
+  }
+
+  .grid .start-xl-2 {
+    grid-column-start: 2;
+  }
+
+  .grid .start-xl-3 {
+    grid-column-start: 3;
+  }
+
+  .grid .start-xl-4 {
+    grid-column-start: 4;
+  }
+
+  .grid .start-xl-5 {
+    grid-column-start: 5;
+  }
+
+  .grid .start-xl-6 {
+    grid-column-start: 6;
+  }
+
+  .grid .start-xl-7 {
+    grid-column-start: 7;
+  }
+
+  .grid .start-xl-8 {
+    grid-column-start: 8;
+  }
+
+  .grid .start-xl-9 {
+    grid-column-start: 9;
+  }
+
+  .grid .start-xl-10 {
+    grid-column-start: 10;
+  }
+
+  .grid .start-xl-11 {
+    grid-column-start: 11;
+  }
+}
+
+.container {
+  padding: 0 16px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 64px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 64px;
+  }
+}

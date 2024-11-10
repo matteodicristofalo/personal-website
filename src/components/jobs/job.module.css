@@ -1,0 +1,34 @@
+.job {
+  margin-bottom: 10rem;
+}
+
+.job:last-child {
+  margin-bottom: 15rem;
+}
+
+.job__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.job__details__company__logo {
+  display: block;
+  margin-bottom: 1rem;
+  width: 150px;
+}
+
+.job__details__company__name {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.job__details__role,
+.job__details__period {
+  font-size: 1.5rem;
+}
+
+.job__description p {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}

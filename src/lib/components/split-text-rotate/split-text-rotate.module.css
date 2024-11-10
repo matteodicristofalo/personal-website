@@ -1,0 +1,33 @@
+.text {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  gap: 0.25em;
+}
+
+.container:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  transform: translateY(100%);
+}
+
+.word {
+  position: relative;
+}
+
+.char {
+  display: inline-block;
+  transition-delay: var(--var-delay);
+  transition-duration: var(--var-duration);
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  will-change: transform;
+}
+
+.text:hover .char {
+  transform: translateY(-100%);
+}

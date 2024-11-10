@@ -1,0 +1,43 @@
+import { Section } from "@/components/section/section";
+import styles from "./contacts.module.css";
+import { SplitTextRotate } from "@/lib/components/split-text-rotate/split-text-rotate";
+import { SplitTextReveal } from "@/lib/components/split-text-reveal/split-text-reveal";
+
+export function Contacts() {
+  return (
+    <Section
+      number="04"
+      title="Want to work toghether?"
+      subtitle="Send me a message"
+      minHeight={false}
+    >
+      <div className={styles["contacts"]}>
+        <a
+          href="mailto:dicristofalomatteo@gmail.com"
+          className={styles["contacts__email"]}
+        >
+          <SplitTextReveal text="dicristofalomatteo" splitType="word" />
+          <SplitTextReveal text="@gmail.com" splitType="word" />
+        </a>
+
+        <ul className={styles["contacts__social"]}>
+          <li>
+            <a href="#" className={styles["contacts__social__link"]}>
+              <SplitTextRotate text="Instagram" />
+            </a>
+          </li>
+          <li>
+            <a href="#" className={styles["contacts__social__link"]}>
+              <SplitTextRotate text="Linkedin" />
+            </a>
+          </li>
+          <li>
+            <a href="#" className={styles["contacts__social__link"]}>
+              <SplitTextRotate text="Github" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </Section>
+  );
+}

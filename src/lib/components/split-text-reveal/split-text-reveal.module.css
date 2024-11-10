@@ -1,0 +1,23 @@
+.text {
+  position: relative;
+}
+
+.word {
+  display: inline-flex;
+  margin-right: 0.25em;
+  overflow: hidden;
+  position: relative;
+}
+
+.word span {
+  transform: translateY(100%);
+  transition-delay: var(--var-delay);
+  transition-duration: var(--var-duration);
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  will-change: transform;
+}
+
+.text.animate .word span {
+  transform: translateY(0);
+}

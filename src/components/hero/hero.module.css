@@ -1,0 +1,36 @@
+.hero {
+  align-items: center;
+  display: flex;
+  height: 100dvh;
+  justify-content: center;
+  position: relative;
+}
+
+.hero__name {
+  bottom: 0;
+  font-family: var(--font-durer);
+  font-size: calc(100vw / 11);
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.hero__image {
+  aspect-ratio: 3 / 4;
+  background: lightgray;
+  width: 300px;
+  animation: anim 0.5s ease-in forwards;
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

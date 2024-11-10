@@ -1,0 +1,14 @@
+.introduction {
+  align-items: center;
+  display: flex;
+  height: 100dvh;
+  justify-content: center;
+  position: relative;
+}
+
+.introduction__paragraph {
+  font-size: 2.5rem;
+  margin: auto;
+  max-width: 720px;
+  text-align: center;
+}
