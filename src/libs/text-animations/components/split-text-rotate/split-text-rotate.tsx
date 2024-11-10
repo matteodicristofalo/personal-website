@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import { round } from "../../utils/numbers";
 import { characters } from "../../utils/text";
 import { SplitTextRotateProps } from "./split-text-rotate.types";
-import styles from "./split-text-rotate.module.css";
+import styles from "./split-text-rotate.module.scss";
 
 const DEFAULT_DURATION = 0.25;
 const DEFAULT_STAGGER = 0.025;

@@ -1,0 +1,25 @@
+.section {
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    margin-bottom: 10rem;
+
+    &__number {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    &__title,
+    &__subtitle {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 2rem;
+      max-width: 200px;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import { SplitTextReveal } from "@/libs/text-animations/components/split-text-reveal/split-text-reveal";
-import styles from "./introduction.module.css";
+import styles from "./introduction.module.scss";
 
 export function Introduction() {
   const memoizedRevealOptions = useMemo(() => ({ stagger: 0.001 }), []);

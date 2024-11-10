@@ -1,0 +1,42 @@
+.skills {
+  gap: 3rem;
+
+  .skill {
+    border-right: 1px solid var(--dark-foreground-color);
+    opacity: 0;
+    padding-right: 1rem;
+    transition: opacity 1s ease-out var(--var-delay);
+    will-change: opacity;
+
+    &__container {
+      position: relative;
+
+      &:nth-of-type(4n) .skill {
+        border-right: 0;
+      }
+    }
+
+    &.animate {
+      opacity: 1;
+    }
+
+    &__number {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 1rem 0;
+      text-transform: lowercase;
+    }
+
+    &__description {
+      color: var(--dark-foreground-color);
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-transform: lowercase;
+    }
+  }
+}

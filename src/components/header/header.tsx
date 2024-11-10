@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { SplitTextRotate } from "@/libs/text-animations/components/split-text-rotate/split-text-rotate";
 import clsx from "clsx";
-import styles from "./header.module.css";
+import styles from "./header.module.scss";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);

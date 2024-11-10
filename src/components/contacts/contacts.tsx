@@ -1,5 +1,5 @@
 import { Section } from "@/components/section/section";
-import styles from "./contacts.module.css";
+import styles from "./contacts.module.scss";
 import { SplitTextRotate } from "@/libs/text-animations/components/split-text-rotate/split-text-rotate";
 import { SplitTextReveal } from "@/libs/text-animations/components/split-text-reveal/split-text-reveal";
 

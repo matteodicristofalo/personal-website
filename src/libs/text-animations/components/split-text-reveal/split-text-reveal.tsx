@@ -6,7 +6,7 @@ import { characters, sentences, words } from "../../utils/text";
 import { useIntersectionObserver } from "../../hooks/use-intersection-observer";
 import { SplitTextRevealProps } from "./split-test-reveal.types";
 import clsx from "clsx";
-import styles from "./split-text-reveal.module.css";
+import styles from "./split-text-reveal.module.scss";
 
 const DEFAULT_DURATION = 0.5;
 const DEFAULT_STAGGER = 0.01;

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import styles from "./section.module.css";
+import styles from "./section.module.scss";
 
 type SectionProps = {
   number: string;

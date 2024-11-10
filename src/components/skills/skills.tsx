@@ -1,14 +1,14 @@
 import { Section } from "@/components/section/section";
 import { Skill } from "./skill";
 import clsx from "clsx";
-import styles from "./skills.module.css";
+import styles from "./skills.module.scss";
 
 export function Skills() {
   return (
     <Section id="skills" number="02" title="Skills">
       <div className={clsx("grid", styles["skills"])}>
         {skills.map((skill, i) => (
-          <div className={clsx("col-3", styles["skill-container"])} key={i}>
+          <div className={clsx("col-3", styles["skill__container"])} key={i}>
             <Skill
               number={skillNumber(i + 1)}
               title={skill.title}
