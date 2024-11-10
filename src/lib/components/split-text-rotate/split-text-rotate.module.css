@@ -17,7 +17,7 @@
 .char {
   display: inline-block;
   min-width: 0.25em;
-  transition-delay: var(--var-delay);
+  transition-delay: var(--var-delay-out);
   transition-duration: var(--var-duration);
   transition-property: transform;
   transition-timing-function: ease-out;
@@ -26,4 +26,5 @@
 
 .text:hover .char {
   transform: translateY(-100%);
+  transition-delay: var(--var-delay-in);
 }

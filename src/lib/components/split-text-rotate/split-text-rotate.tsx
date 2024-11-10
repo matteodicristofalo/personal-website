@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback } from "react";
 import { round } from "@/lib/utils/numbers";
 import { characters } from "@/lib/utils/text";
 import { SplitTextRotateProps } from "./split-text-rotate.types";
@@ -11,6 +12,18 @@ const DEFAULT_STAGGER = 0.025;
 export function SplitTextRotate({ text, rotateOptions }: SplitTextRotateProps) {
   const transitionDuration = rotateOptions?.duration || DEFAULT_DURATION;
   const transitionStagger = rotateOptions?.stagger || DEFAULT_STAGGER;
+  const splittedText = characters(text);
+
+  const delays = useCallback(
+    (index: number) => {
+      const noElementsZeroBased = splittedText.length - 1;
+      return {
+        in: round(transitionStagger * index, 3),
+        out: round(transitionStagger * (noElementsZeroBased - index), 3),
+      };
+    },
+    [splittedText, transitionStagger]
+  );
 
   return (
     <span
@@ -23,19 +36,23 @@ export function SplitTextRotate({ text, rotateOptions }: SplitTextRotateProps) {
     >
       {Array.from({ length: 2 }).map((_, i) => (
         <span key={i} className={styles["container"]}>
-          {characters(text).map((char, i) => (
-            <span
-              key={i}
-              className={styles["char"]}
-              style={
-                {
-                  "--var-delay": `${round(transitionStagger * i, 3)}s`,
-                } as React.CSSProperties
-              }
-            >
-              {char}
-            </span>
-          ))}
+          {splittedText.map((char, i) => {
+            const charDelays = delays(i);
+            return (
+              <span
+                key={i}
+                className={styles["char"]}
+                style={
+                  {
+                    "--var-delay-in": `${charDelays.in}s`,
+                    "--var-delay-out": `${charDelays.out}s`,
+                  } as React.CSSProperties
+                }
+              >
+                {char}
+              </span>
+            );
+          })}
         </span>
       ))}
     </span>
