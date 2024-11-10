@@ -1,6 +1,6 @@
 export type SplitTextRotateProps = {
   text: string;
-  rotateOptions?: RotateOptions;
+  rotateOptions?: Partial<RotateOptions>;
 };
 
 type RotateOptions = {
