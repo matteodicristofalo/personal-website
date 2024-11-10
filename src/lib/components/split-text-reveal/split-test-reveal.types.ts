@@ -4,14 +4,9 @@ export type SplitTextRevealProps = {
   revealOptions?: Partial<RevealOptions>;
 };
 
-type SplitType = "char" | "word";
+type SplitType = "sentence" | "word" | "char";
 
 type RevealOptions = {
   duration: number;
   stagger: number;
-};
-
-export type AnimatedSpanProps = {
-  text: string;
-  delay: number;
 };

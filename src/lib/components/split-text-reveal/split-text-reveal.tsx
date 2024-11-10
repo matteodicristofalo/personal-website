@@ -2,12 +2,9 @@
 
 import { useMemo, useRef } from "react";
 import { round } from "@/lib/utils/numbers";
-import { characters, words } from "@/lib/utils/text";
+import { characters, sentences, words } from "@/lib/utils/text";
 import { useIntersectionObserver } from "@/lib/hooks/use-intersection-observer";
-import {
-  AnimatedSpanProps,
-  SplitTextRevealProps,
-} from "./split-test-reveal.types";
+import { SplitTextRevealProps } from "./split-test-reveal.types";
 import clsx from "clsx";
 import styles from "./split-text-reveal.module.css";
 
@@ -25,6 +22,17 @@ export function SplitTextReveal({
   const transitionDuration = revealOptions?.duration || DEFAULT_DURATION;
   const transitionStagger = revealOptions?.stagger || DEFAULT_STAGGER;
 
+  const splitFn = useMemo(() => {
+    switch (splitType) {
+      case "sentence":
+        return sentences;
+      case "word":
+        return words;
+      case "char":
+        return characters;
+    }
+  }, [splitType]);
+
   return (
     <span
       ref={ref}
@@ -35,35 +43,19 @@ export function SplitTextReveal({
         } as React.CSSProperties
       }
     >
-      {words(text).map((word, i) => (
-        <span key={i} className={styles["word"]}>
-          {splitType === "word" ? (
-            <AnimatedSpan text={word} delay={transitionStagger * i} />
-          ) : (
-            characters(word).map((character, i) => (
-              <AnimatedSpan
-                key={i}
-                text={character}
-                delay={round(transitionStagger * i, 3)}
-              />
-            ))
-          )}
+      {splitFn(text).map((el, i) => (
+        <span key={i} className={styles["container"]}>
+          <span
+            style={
+              {
+                "--var-delay": `${round(transitionStagger * i, 3)}s`,
+              } as React.CSSProperties
+            }
+          >
+            {el}
+          </span>
         </span>
       ))}
-    </span>
-  );
-}
-
-function AnimatedSpan({ text, delay }: AnimatedSpanProps) {
-  return (
-    <span
-      style={
-        {
-          "--var-delay": `${delay}s`,
-        } as React.CSSProperties
-      }
-    >
-      {text}
     </span>
   );
 }

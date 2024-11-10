@@ -2,14 +2,13 @@
   position: relative;
 }
 
-.word {
+.container {
   display: inline-flex;
-  margin-right: 0.25em;
   overflow: hidden;
-  position: relative;
 }
 
-.word span {
+.container span {
+  min-width: 0.25em;
   transform: translateY(100%);
   transition-delay: var(--var-delay);
   transition-duration: var(--var-duration);
@@ -18,6 +17,6 @@
   will-change: transform;
 }
 
-.text.animate .word span {
+.text.animate .container span {
   transform: translateY(0);
 }

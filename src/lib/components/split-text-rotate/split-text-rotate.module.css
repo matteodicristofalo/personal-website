@@ -6,7 +6,6 @@
 
 .container {
   display: flex;
-  gap: 0.25em;
 }
 
 .container:nth-of-type(2) {
@@ -15,12 +14,9 @@
   transform: translateY(100%);
 }
 
-.word {
-  position: relative;
-}
-
 .char {
   display: inline-block;
+  min-width: 0.25em;
   transition-delay: var(--var-delay);
   transition-duration: var(--var-duration);
   transition-property: transform;
