@@ -17,7 +17,7 @@ export function SplitTextReveal({
   revealOptions,
 }: SplitTextRevealProps) {
   const ref = useRef(null);
-  const memoizedOptions = useMemo(() => ({ once: true, threshold: 0.75 }), []);
+  const memoizedOptions = useMemo(() => ({ once: false, threshold: 0.75 }), []);
   const isInView = useIntersectionObserver(ref, memoizedOptions);
   const transitionDuration = revealOptions?.duration || DEFAULT_DURATION;
   const transitionStagger = revealOptions?.stagger || DEFAULT_STAGGER;

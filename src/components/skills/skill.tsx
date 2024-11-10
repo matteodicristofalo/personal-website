@@ -17,7 +17,7 @@ export function Skill({
   revealDelay: number;
 }) {
   const ref = useRef(null);
-  const memoizedOptions = useMemo(() => ({ once: true, threshold: 0.75 }), []);
+  const memoizedOptions = useMemo(() => ({ once: false, threshold: 0.75 }), []);
   const isInView = useIntersectionObserver(ref, memoizedOptions);
 
   return (
