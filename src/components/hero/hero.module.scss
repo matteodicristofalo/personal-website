@@ -1,3 +1,5 @@
+@use "../../mixins/display.scss" as d;
+
 .hero {
   align-items: center;
   display: flex;
@@ -18,8 +20,12 @@
   &__image {
     aspect-ratio: 3 / 4;
     background: lightgray;
-    width: 300px;
+    width: 200px;
     animation: anim 0.5s ease-in forwards;
+
+    @include d.desktop {
+      width: 300px;
+    }
   }
 }
 
