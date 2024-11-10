@@ -1,9 +1,9 @@
 "use client";
 
 import { useMemo, useRef } from "react";
-import { round } from "@/lib/utils/numbers";
-import { characters, sentences, words } from "@/lib/utils/text";
-import { useIntersectionObserver } from "@/lib/hooks/use-intersection-observer";
+import { round } from "../../utils/numbers";
+import { characters, sentences, words } from "../../utils/text";
+import { useIntersectionObserver } from "../../hooks/use-intersection-observer";
 import { SplitTextRevealProps } from "./split-test-reveal.types";
 import clsx from "clsx";
 import styles from "./split-text-reveal.module.css";

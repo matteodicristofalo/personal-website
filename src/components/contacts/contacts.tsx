@@ -1,7 +1,7 @@
 import { Section } from "@/components/section/section";
 import styles from "./contacts.module.css";
-import { SplitTextRotate } from "@/lib/components/split-text-rotate/split-text-rotate";
-import { SplitTextReveal } from "@/lib/components/split-text-reveal/split-text-reveal";
+import { SplitTextRotate } from "@/libs/text-animations/components/split-text-rotate/split-text-rotate";
+import { SplitTextReveal } from "@/libs/text-animations/components/split-text-reveal/split-text-reveal";
 
 export function Contacts() {
   return (

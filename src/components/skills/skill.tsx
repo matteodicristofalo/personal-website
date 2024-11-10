@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useRef } from "react";
-import { useIntersectionObserver } from "@/lib/hooks/use-intersection-observer";
+import { useIntersectionObserver } from "@/libs/text-animations/hooks/use-intersection-observer";
 import clsx from "clsx";
 import styles from "./skills.module.css";
 

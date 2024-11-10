@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SplitTextRotate } from "@/lib/components/split-text-rotate/split-text-rotate";
+import { SplitTextRotate } from "@/libs/text-animations/components/split-text-rotate/split-text-rotate";
 import clsx from "clsx";
 import styles from "./header.module.css";
 

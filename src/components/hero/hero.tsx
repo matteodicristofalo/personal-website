@@ -1,4 +1,4 @@
-import { SplitTextReveal } from "@/lib/components/split-text-reveal/split-text-reveal";
+import { SplitTextReveal } from "@/libs/text-animations/components/split-text-reveal/split-text-reveal";
 import styles from "./hero.module.css";
 
 export function Hero() {
