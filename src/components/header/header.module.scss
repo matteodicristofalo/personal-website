@@ -1,3 +1,5 @@
+@use "../../mixins/display.scss" as d;
+
 .header {
   display: flex;
   justify-content: flex-end;
@@ -48,7 +50,11 @@
       cursor: pointer;
       display: inline-block;
       font-family: var(--font-durer);
-      font-size: 8rem;
+      font-size: 4rem;
+
+      @include d.desktop {
+        font-size: 8rem;
+      }
     }
   }
 }

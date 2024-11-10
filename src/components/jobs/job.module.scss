@@ -1,36 +1,64 @@
+@use "../../mixins/display.scss" as d;
+
 .job {
-  margin-bottom: 10rem;
+  row-gap: 2rem;
+  margin-bottom: 5rem;
 
   &:last-child {
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
+
+    @include d.desktop {
+      margin-bottom: 15rem;
+    }
   }
 
   &__details {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 
     &__company__logo {
       display: block;
       margin-bottom: 1rem;
-      width: 150px;
+      width: 100px;
+
+      @include d.desktop {
+        width: 150px;
+      }
     }
 
     &__company__name {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 500;
+
+      @include d.desktop {
+        font-size: 2.5rem;
+      }
     }
 
     &__role,
     &__period {
       color: var(--dark-foreground-color);
-      font-size: 1.5rem;
+      font-size: 1.25rem;
+
+      @include d.desktop {
+        font-size: 1.5rem;
+      }
     }
   }
 
   &__description {
     color: var(--dark-foreground-color);
-    font-size: 1.25rem;
-    line-height: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+
+    @include d.desktop {
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+  }
+
+  @include d.desktop {
+    margin-bottom: 10rem;
   }
 }

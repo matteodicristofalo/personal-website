@@ -8,7 +8,10 @@ export function Skills() {
     <Section id="skills" number="02" title="Skills">
       <div className={clsx("grid", styles["skills"])}>
         {skills.map((skill, i) => (
-          <div className={clsx("col-3", styles["skill__container"])} key={i}>
+          <div
+            className={clsx("col-12 col-lg-3", styles["skill__container"])}
+            key={i}
+          >
             <Skill
               number={skillNumber(i + 1)}
               title={skill.title}

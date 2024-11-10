@@ -1,3 +1,5 @@
+@use "../../mixins/display.scss" as d;
+
 .section {
   position: relative;
 
@@ -6,7 +8,7 @@
   }
 
   &__header {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 
     &__number {
       font-size: 2rem;
@@ -20,6 +22,10 @@
       line-height: 2rem;
       max-width: 200px;
       text-transform: uppercase;
+    }
+
+    @include d.desktop {
+      margin-bottom: 10rem;
     }
   }
 }

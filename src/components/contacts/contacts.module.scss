@@ -1,3 +1,5 @@
+@use "../../mixins/display.scss" as d;
+
 .contacts {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
 
   &__email {
     display: block;
-    font-size: 6rem;
+    font-size: 1.75rem;
     font-weight: 500;
     text-transform: uppercase;
     max-width: 22ch;
@@ -36,6 +38,10 @@
     &:hover span[class*="_container"] span::before {
       transform: translateX(100%);
       transition: transform 1s ease-out;
+    }
+
+    @include d.desktop {
+      font-size: 6rem;
     }
   }
 

@@ -20,7 +20,7 @@ export function Job({ company, role, period, description }: JobProps) {
 
   return (
     <div className={clsx("grid", styles["job"])}>
-      <div className="col-4 start-2">
+      <div className="col-12 col-lg-4 start-lg-2">
         <div className={styles["job__details"]}>
           <img
             src={company.logo}
@@ -39,7 +39,7 @@ export function Job({ company, role, period, description }: JobProps) {
         </div>
       </div>
 
-      <div className="col-6">
+      <div className="col-12 col-lg-6">
         <div className={styles["job__description"]}>
           <p>
             <SplitTextReveal

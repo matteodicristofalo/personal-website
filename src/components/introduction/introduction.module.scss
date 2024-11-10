@@ -1,14 +1,21 @@
+@use "../../mixins/display.scss" as d;
+
 .introduction {
   align-items: center;
   display: flex;
   height: 100dvh;
   justify-content: center;
+  padding: 0 1rem;
   position: relative;
 
   &__paragraph {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin: auto;
     max-width: 720px;
     text-align: center;
+
+    @include d.desktop {
+      font-size: 2.5rem;
+    }
   }
 }

@@ -1,9 +1,13 @@
+@use "../../mixins/display.scss" as d;
+
 .skills {
-  gap: 3rem;
+  gap: 2rem;
+  margin-bottom: 5rem;
 
   .skill {
-    border-right: 1px solid var(--dark-foreground-color);
+    border-bottom: 1px solid var(--dark-foreground-color);
     opacity: 0;
+    padding-bottom: 1rem;
     padding-right: 1rem;
     transition: opacity 1s ease-out var(--var-delay);
     will-change: opacity;
@@ -12,7 +16,7 @@
       position: relative;
 
       &:nth-of-type(4n) .skill {
-        border-right: 0;
+        border-bottom: 0;
       }
     }
 
@@ -38,5 +42,20 @@
       line-height: 1.5rem;
       text-transform: lowercase;
     }
+
+    @include d.desktop {
+      border-bottom: 0;
+      border-right: 1px solid var(--dark-foreground-color);
+
+      &__container {
+        &:nth-of-type(4n) .skill {
+          border-right: 0;
+        }
+      }
+    }
+  }
+
+  @include d.desktop {
+    gap: 3rem;
   }
 }
