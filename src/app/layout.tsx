@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { ReactLenis } from "@/libs/lenis";
 import { Header } from "@/components/header/header";
 import "./globals.css";
 
@@ -21,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={durer.variable}>
-        <Header />
-        <main>{children}</main>
+        <ReactLenis root>
+          <Header />
+          <main>{children}</main>
+        </ReactLenis>
       </body>
     </html>
   );
