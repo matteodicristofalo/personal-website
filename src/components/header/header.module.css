@@ -26,9 +26,6 @@
   position: fixed;
   top: 0;
   transform: translateX(-100%);
-  transition-duration: 0.25s;
-  transition-property: transform, opacity;
-  transition-timing-function: ease-out;
   width: 100dvw;
   will-change: transform, opacity;
   z-index: 1;
@@ -37,6 +34,7 @@
 .header__menu.is-open {
   opacity: 1;
   transform: translateX(0);
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
 }
 
 .header__menu__links {
