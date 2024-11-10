@@ -2,8 +2,15 @@
   gap: 3rem;
 }
 
-.skill {
+.skill-container {
   border-right: 1px solid var(--dark-foreground-color);
+}
+
+.skill-container:nth-of-type(4n) {
+  border-right: 0;
+}
+
+.skill {
   opacity: 0;
   padding-right: 1rem;
   transition: opacity 0.5s ease-out var(--var-delay);
