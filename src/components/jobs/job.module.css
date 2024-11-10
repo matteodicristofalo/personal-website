@@ -25,7 +25,12 @@
 
 .job__details__role,
 .job__details__period {
+  color: var(--dark-foreground-color);
   font-size: 1.5rem;
+}
+
+.job__description {
+  color: var(--dark-foreground-color);
 }
 
 .job__description p {

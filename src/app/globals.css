@@ -1,7 +1,10 @@
-body {
-  --foreground-color: black;
-  --background-color: #fbefe3;
+:root {
+  --background-color: #140d0d;
+  --foreground-color: #f1ebc9;
+  --dark-foreground-color: #f1ebc9bf;
+}
 
+body {
   color: var(--foreground-color);
   background: var(--background-color);
   font-family: "Helvetica Neue", sans-serif;

@@ -3,7 +3,7 @@
 }
 
 .skill {
-  border-right: 1px solid var(--foreground-color);
+  border-right: 1px solid var(--dark-foreground-color);
   opacity: 0;
   padding-right: 1rem;
   transition: opacity 0.5s ease-out var(--var-delay);
@@ -27,6 +27,7 @@
 }
 
 .skill__description {
+  color: var(--dark-foreground-color);
   font-size: 1rem;
   line-height: 1.5rem;
   text-transform: lowercase;
