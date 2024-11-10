@@ -22,7 +22,6 @@
 .header__menu {
   background: inherit;
   height: 100dvh;
-  opacity: 0;
   position: fixed;
   top: 0;
   transform: translateX(-100%);
@@ -32,12 +31,11 @@
 }
 
 .header__menu.is-open {
-  opacity: 1;
   transform: translateX(0);
-  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+  transition: transform 0.25s ease-out;
 }
 
-.header__menu__links {
+.header__menu__items {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -47,7 +45,9 @@
   padding: 0 2rem;
 }
 
-.header__menu__link {
+.header__menu__item {
+  all: unset;
+  cursor: pointer;
   display: inline-block;
   font-family: var(--font-durer);
   font-size: 8rem;

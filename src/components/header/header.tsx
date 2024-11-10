@@ -8,6 +8,12 @@ import styles from "./header.module.css";
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToElement = (selector: string) => {
+    setIsOpen(false);
+    const element = document.querySelector(selector);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <header className={clsx("container", styles["header"])}>
@@ -25,26 +31,42 @@ export function Header() {
           [styles["is-open"]]: isOpen,
         })}
       >
-        <ul className={styles["header__menu__links"]}>
+        <ul className={styles["header__menu__items"]}>
           <li>
-            <a href="#" className={styles["header__menu__link"]}>
+            <button
+              type="button"
+              className={styles["header__menu__item"]}
+              onClick={() => scrollToElement("#jobs")}
+            >
               <SplitTextRotate text="Jobs" />
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#" className={styles["header__menu__link"]}>
+            <button
+              type="button"
+              className={styles["header__menu__item"]}
+              onClick={() => scrollToElement("#skills")}
+            >
               <SplitTextRotate text="Skills" />
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#" className={styles["header__menu__link"]}>
+            <button
+              type="button"
+              className={styles["header__menu__item"]}
+              onClick={() => scrollToElement("#about")}
+            >
               <SplitTextRotate text="About" />
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#" className={styles["header__menu__link"]}>
+            <button
+              type="button"
+              className={styles["header__menu__item"]}
+              onClick={() => scrollToElement("#contacts")}
+            >
               <SplitTextRotate text="Contacts" />
-            </a>
+            </button>
           </li>
         </ul>
       </div>
