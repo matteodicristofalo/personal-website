@@ -10,18 +10,19 @@
   &__header {
     margin-bottom: 5rem;
 
-    &__number {
-      font-size: 2rem;
-      font-weight: 500;
-    }
-
+    &__number,
     &__title,
     &__subtitle {
-      font-size: 1.5rem;
+      display: inline-block;
+      font-size: 2rem;
       font-weight: 500;
       line-height: 2rem;
-      max-width: 200px;
-      text-transform: uppercase;
+      max-width: 250px;
+      margin-bottom: 1rem;
+
+      @include d.desktop {
+        margin-bottom: 0;
+      }
     }
 
     @include d.desktop {

@@ -17,10 +17,8 @@ export function Contacts() {
           href="mailto:dicristofalomatteo@gmail.com"
           className={styles["contacts__email"]}
         >
-          <SplitTextReveal
-            text="dicristofalomatteo@gmail.com"
-            splitType="sentence"
-          />
+          <SplitTextReveal text="dicristofalomatteo" splitType="sentence" />
+          <SplitTextReveal text="@gmail.com" splitType="sentence" />
         </a>
 
         <ul className={styles["contacts__social"]}>

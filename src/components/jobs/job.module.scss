@@ -18,6 +18,7 @@
     gap: 1rem;
 
     &__company__logo {
+      border-radius: 4px;
       display: block;
       margin-bottom: 1rem;
       width: 100px;
@@ -28,6 +29,7 @@
     }
 
     &__company__name {
+      font-family: var(--font-helvetica);
       font-size: 2rem;
       font-weight: 500;
 
@@ -38,7 +40,6 @@
 
     &__role,
     &__period {
-      color: var(--dark-foreground-color);
       font-size: 1.25rem;
 
       @include d.desktop {
@@ -48,12 +49,11 @@
   }
 
   &__description {
-    color: var(--dark-foreground-color);
     font-size: 1.1rem;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
 
     @include d.desktop {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       line-height: 2rem;
     }
   }

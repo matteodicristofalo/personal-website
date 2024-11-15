@@ -42,14 +42,18 @@
       justify-content: center;
       list-style: none;
       margin: 0;
-      padding: 0 2rem;
+      padding: 0 1rem;
+
+      @include d.desktop {
+        padding: 0 3rem;
+      }
     }
 
     &__item {
       all: unset;
       cursor: pointer;
       display: inline-block;
-      font-family: var(--font-durer);
+      font-weight: 500;
       font-size: 4rem;
 
       @include d.desktop {

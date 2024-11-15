@@ -25,7 +25,7 @@ export function Section({
       style={{ minHeight: minHeight ? "100vh" : "auto" }}
     >
       <div className={clsx("grid", styles["section__header"])}>
-        <div className="col-12 col-lg-3">
+        <div className="col-12 col-lg-2">
           <span className={styles["section__header__number"]}>{number}/</span>
         </div>
 

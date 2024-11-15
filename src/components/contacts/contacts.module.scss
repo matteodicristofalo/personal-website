@@ -8,7 +8,7 @@
   &__email {
     display: block;
     font-size: 1.75rem;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
     max-width: 22ch;
     overflow-wrap: break-word;
@@ -47,11 +47,11 @@
 
   &__social {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
     list-style: none;
     margin: 0;
-    padding: 3rem 0;
+    padding: 2rem 0;
 
     &__link {
       font-size: 1rem;
@@ -61,5 +61,14 @@
         font-size: 1.2rem;
       }
     }
+
+    @include d.desktop {
+      gap: 2rem;
+      padding: 3rem 0;
+    }
+  }
+
+  @include d.desktop {
+    gap: 10rem;
   }
 }

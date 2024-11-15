@@ -1,13 +1,13 @@
 :root {
-  --background-color: #140d0d;
-  --foreground-color: #f1ebc9;
-  --dark-foreground-color: #f1ebc9bf;
+  --background-color: #ffe7d0;
+  --foreground-color: #222;
+  --font-helvetica: 'Helvetica Neue';
 }
 
 body {
   color: var(--foreground-color);
   background: var(--background-color);
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: var(--font-gnarly);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
