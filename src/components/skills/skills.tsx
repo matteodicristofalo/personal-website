@@ -28,7 +28,7 @@ export function Skills() {
                 number={skillNumber(i + 1)}
                 title={skill.title}
                 description={skill.description}
-                revealDelay={0.05 * i}
+                revealDelay={0.025 * i}
               />
             </div>
           ))}
