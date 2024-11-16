@@ -28,7 +28,7 @@ export function Skills() {
                 number={skillNumber(i + 1)}
                 title={skill.title}
                 description={skill.description}
-                revealDelay={randomDelay()}
+                revealDelay={0.05 * i}
               />
             </div>
           ))}
@@ -43,8 +43,6 @@ export function Skills() {
 }
 
 const skillNumber = (index: number) => (index < 9 ? `0${index}` : `${index}`);
-
-const randomDelay = () => parseFloat((Math.random() * 0.25).toFixed(2));
 
 const skills = Array(8).fill({
   title: "Title",
