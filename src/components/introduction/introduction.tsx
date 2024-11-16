@@ -11,7 +11,8 @@ export function Introduction() {
     <section className={styles["introduction"]}>
       <p className={styles["introduction__paragraph"]}>
         <SplitTextReveal
-          text="Ciao 👋🏼 - I'm a Frontend Developer based in Florence. Lorem ipsum dolor sit amet astate mit reles"
+          splitType="word"
+          text="Ciao 👋🏼 - I'm a Frontend Developer based in Florence, passionate in building creative websites that engage and inspire."
           revealOptions={memoizedRevealOptions}
         />
       </p>
