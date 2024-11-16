@@ -5,6 +5,7 @@
   color: var(--section-foreground-color, --foreground-color);
   padding: 3rem 0;
   position: relative;
+  transition: all 0.25s ease-out;
 
   &:last-child {
     margin-bottom: 0;

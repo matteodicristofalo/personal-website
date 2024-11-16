@@ -1,10 +1,23 @@
+"use client";
+
+import { useRef } from "react";
+import { useIntersectionObserver } from "@/libs/text-animations/hooks/use-intersection-observer";
 import { Section } from "@/components/section/section";
 import { Job } from "./job";
+import clsx from "clsx";
 import styles from "./job.module.scss";
 
 export function Jobs() {
+  const ref = useRef(null);
+  const isInView = useIntersectionObserver(ref, { threshold: 0.25 });
+
   return (
-    <Section id={styles["job-section"]} number="01" title="Jobs">
+    <Section
+      ref={ref}
+      id={clsx({ [styles["job-section"]]: isInView })}
+      number="01"
+      title="Jobs"
+    >
       {jobs.map((job, i) => (
         <Job key={i} {...job} />
       ))}

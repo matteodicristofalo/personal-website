@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import styles from "./section.module.scss";
+import { forwardRef } from "react";
 
 type SectionProps = {
   number: string;
@@ -10,16 +11,13 @@ type SectionProps = {
   children: React.ReactNode;
 };
 
-export function Section({
-  number,
-  title,
-  subtitle,
-  minHeight = true,
-  id,
-  children,
-}: SectionProps) {
+export const Section = forwardRef<HTMLElement, SectionProps>(function Section(
+  { number, title, subtitle, minHeight = true, id, children },
+  ref
+) {
   return (
     <section
+      ref={ref}
       id={id}
       className={styles["section"]}
       style={{ minHeight: minHeight ? "100vh" : "auto" }}
@@ -47,4 +45,4 @@ export function Section({
       </div>
     </section>
   );
-}
+});
