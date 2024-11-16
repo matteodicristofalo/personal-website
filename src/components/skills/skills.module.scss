@@ -13,10 +13,6 @@
 
     &__container {
       position: relative;
-
-      &:nth-of-type(4n) .skill {
-        border-bottom: 0;
-      }
     }
 
     &.animate {
@@ -42,11 +38,9 @@
     }
 
     @include d.desktop {
-      border-bottom: 0;
-
       &__container {
-        &:nth-of-type(4n) .skill {
-          border-right: 0;
+        &:nth-of-type(9) {
+          grid-column-start: 4;
         }
       }
     }
