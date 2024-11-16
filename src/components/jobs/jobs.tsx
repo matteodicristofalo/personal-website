@@ -34,7 +34,7 @@ const jobs = [
     role: "Frontend Developer",
     period: "2022 - now",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minima saepe dolores iusto earum excepturi nulla magni distinctio iste autem a eum commodi, dicta nostrum esse sequi eius delectus quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minima saepe dolores iusto earum excepturi nulla magni distinctio iste autem a eum commodi, dicta nostrum esse sequi eius delectus quo. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "I've contributed to key projects such as developing the e-commerce with a primary focus on the Product Detail Page, to the development of the orchestration layer for a microfrontend architecture and to a Design System library to ensure consistency across all Gucci Digital products. Working and collaborating in a dynamic, cross-functional environment, managing codebases shared among dozens of developers ensuring high-quality development standards.",
   },
   {
     company: {
@@ -44,6 +44,6 @@ const jobs = [
     role: "Fullstack Developer",
     period: "2021 - 2022",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minima saepe dolores iusto earum excepturi nulla magni distinctio iste autem a eum commodi, dicta nostrum esse sequi eius delectus quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure minima saepe dolores iusto earum excepturi nulla magni distinctio iste autem a eum commodi, dicta nostrum esse sequi eius delectus quo. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "I've developed and maintained a comprehensive application that streamlined appointment bookings for healthcare companies. I contributed to both front-end and back-end development, demonstrating my ability to work across the full stack and",
   },
 ];

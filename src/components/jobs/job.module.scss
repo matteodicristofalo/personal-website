@@ -1,8 +1,9 @@
 @use "../../mixins/display.scss" as d;
 
 .job {
-  row-gap: 2rem;
+  align-items: end;
   margin-bottom: 5rem;
+  row-gap: 2rem;
 
   &:last-child {
     margin-bottom: 5rem;
@@ -34,7 +35,6 @@
     }
 
     &__company__name {
-      font-family: var(--font-helvetica);
       font-size: 2rem;
       font-weight: 500;
 
