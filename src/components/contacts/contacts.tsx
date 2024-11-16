@@ -24,17 +24,29 @@ export function Contacts() {
 
           <ul className={styles["contacts__social"]}>
             <li>
-              <a href="#" className={styles["contacts__social__link"]}>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/matteodicristofalo/"
+                className={styles["contacts__social__link"]}
+              >
                 <SplitTextRotate text="Instagram" />
               </a>
             </li>
             <li>
-              <a href="#" className={styles["contacts__social__link"]}>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/matteo-di-cristofalo-517125259/"
+                className={styles["contacts__social__link"]}
+              >
                 <SplitTextRotate text="Linkedin" />
               </a>
             </li>
             <li>
-              <a href="#" className={styles["contacts__social__link"]}>
+              <a
+                target="_blank"
+                href="https://github.com/matteodicristofalo"
+                className={styles["contacts__social__link"]}
+              >
                 <SplitTextRotate text="Github" />
               </a>
             </li>
