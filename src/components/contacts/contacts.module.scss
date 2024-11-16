@@ -1,14 +1,14 @@
 @use "../../mixins/display.scss" as d;
 
-#contacts-section {
-  --section-background-color: var(--hf-background-color);
-  --section-foreground-color: var(--hf-foreground-color);
-}
-
 .contacts {
   display: flex;
   flex-direction: column;
   gap: 5rem;
+
+  &__section__container {
+    --section-background-color: var(--hf-background-color);
+    --section-foreground-color: var(--hf-foreground-color);
+  }
 
   &__email {
     display: block;

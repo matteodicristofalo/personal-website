@@ -12,16 +12,16 @@ export function Jobs() {
   const isInView = useIntersectionObserver(ref, { threshold: 0.25 });
 
   return (
-    <Section
+    <div
       ref={ref}
-      id={clsx({ [styles["job-section"]]: isInView })}
-      number="01"
-      title="Jobs"
+      className={clsx({ [styles["job__section__container"]]: isInView })}
     >
-      {jobs.map((job, i) => (
-        <Job key={i} {...job} />
-      ))}
-    </Section>
+      <Section id="jobs" number="01" title="Jobs">
+        {jobs.map((job, i) => (
+          <Job key={i} {...job} />
+        ))}
+      </Section>
+    </div>
   );
 }
 

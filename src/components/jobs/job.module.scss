@@ -1,10 +1,5 @@
 @use "../../mixins/display.scss" as d;
 
-#job-section {
-  --section-background-color: var(--darker-background-color);
-  --section-foreground-color: var(--darker-foreground-color);
-}
-
 .job {
   row-gap: 2rem;
   margin-bottom: 5rem;
@@ -15,6 +10,11 @@
     @include d.desktop {
       margin-bottom: 15rem;
     }
+  }
+
+  &__section__container {
+    --section-background-color: var(--darker-background-color);
+    --section-foreground-color: var(--darker-foreground-color);
   }
 
   &__details {
