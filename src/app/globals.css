@@ -1,6 +1,10 @@
 :root {
-  --background-color: #ffe7d0;
-  --foreground-color: #222;
+  --background-color: white;
+  --foreground-color: black;
+  --darker-background-color: #fdf2ed;
+  --darker-foreground-color: black;
+  --hf-background-color: black;
+  --hf-foreground-color: white;
   --font-helvetica: 'Helvetica Neue';
 }
 

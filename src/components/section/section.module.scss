@@ -1,6 +1,9 @@
 @use "../../mixins/display.scss" as d;
 
 .section {
+  background: var(--section-background-color, --background-color);
+  color: var(--section-foreground-color, --foreground-color);
+  padding: 3rem 0;
   position: relative;
 
   &:last-child {
@@ -28,5 +31,9 @@
     @include d.desktop {
       margin-bottom: 10rem;
     }
+  }
+
+  @include d.desktop {
+    padding: 4rem 0;
   }
 }

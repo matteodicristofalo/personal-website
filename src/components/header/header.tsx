@@ -19,7 +19,9 @@ export function Header() {
       <header className={clsx("container", styles["header"])}>
         <button
           type="button"
-          className={styles["header__menu__toggler"]}
+          className={clsx(styles["header__menu__toggler"], {
+            [styles["is-open"]]: isOpen,
+          })}
           onClick={() => setIsOpen(!isOpen)}
         >
           <SplitTextRotate text={isOpen ? "Close" : "Menu"} />

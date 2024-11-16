@@ -1,5 +1,10 @@
 @use "../../mixins/display.scss" as d;
 
+#contacts-section {
+  --section-background-color: var(--hf-background-color);
+  --section-foreground-color: var(--hf-foreground-color);
+}
+
 .contacts {
   display: flex;
   flex-direction: column;
@@ -16,7 +21,7 @@
     word-wrap: break-word;
 
     span[class*="_container"] span::before {
-      background: var(--background-color);
+      background: var(--section-background-color);
       bottom: -0.02em;
       content: "";
       display: block;
@@ -28,7 +33,7 @@
     }
 
     span[class*="_container"] span::after {
-      background: var(--foreground-color);
+      background: var(--section-foreground-color);
       content: "";
       display: block;
       height: 0.075em;
@@ -51,7 +56,6 @@
     justify-content: center;
     list-style: none;
     margin: 0;
-    padding: 2rem 0;
 
     &__link {
       font-size: 1rem;
@@ -64,7 +68,6 @@
 
     @include d.desktop {
       gap: 2rem;
-      padding: 3rem 0;
     }
   }
 

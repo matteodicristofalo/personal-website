@@ -1,9 +1,10 @@
 import { Section } from "@/components/section/section";
 import { Job } from "./job";
+import styles from "./job.module.scss";
 
 export function Jobs() {
   return (
-    <Section id="jobs" number="01" title="Jobs">
+    <Section id={styles["job-section"]} number="01" title="Jobs">
       {jobs.map((job, i) => (
         <Job key={i} {...job} />
       ))}

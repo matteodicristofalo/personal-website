@@ -1,12 +1,12 @@
 import { Section } from "@/components/section/section";
-import styles from "./contacts.module.scss";
 import { SplitTextRotate } from "@/libs/text-animations/components/split-text-rotate/split-text-rotate";
 import { SplitTextReveal } from "@/libs/text-animations/components/split-text-reveal/split-text-reveal";
+import styles from "./contacts.module.scss";
 
 export function Contacts() {
   return (
     <Section
-      id="contacts"
+      id={styles["contacts-section"]}
       number="04"
       title="Want to work toghether?"
       subtitle="Send me a message"
