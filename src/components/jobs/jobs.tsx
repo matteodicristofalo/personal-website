@@ -31,13 +31,13 @@ const jobs = [
     role: "Frontend Developer",
     period: "2022 - now",
     description:
-      "I've contributed to key projects such as developing the e-commerce with a primary focus on the Product Detail Page, to the development of the orchestration layer for a microfrontend architecture and to a Design System library to ensure consistency across all Gucci Digital products. Working and collaborating in a dynamic, cross-functional environment, managing codebases shared among dozens of developers ensuring high-quality development standards.",
+      "Gucci is such an iconic brand. It's a big company that gave me the opportunity work in an international environment. I met a lot of very talented people. During my experience with Gucci I've contributed to key projects such as the development of the e-commerce, of the orchestration layer for a microfrontend architecture and of a Design System library to ensure visual consistency across all Gucci digital products.",
   },
   {
     company: "Pharmap",
     role: "Fullstack Developer",
     period: "2021 - 2022",
     description:
-      "I've developed and maintained a comprehensive application that streamlined appointment bookings for healthcare companies. I contributed to both front-end and back-end development, demonstrating my ability to work across the full stack and",
+      "This was very first my job. During this experience I've done both front-end and back-end development, demonstrating my ability to work across the full stack. I've contributed to the development of an application of appointment bookings for companies in the healtcare industry.",
   },
 ];
