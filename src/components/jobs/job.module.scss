@@ -1,7 +1,6 @@
 @use "../../mixins/display.scss" as d;
 
 .job {
-  align-items: end;
   margin-bottom: 5rem;
   row-gap: 2rem;
 
@@ -22,17 +21,6 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
-    &__company__logo {
-      border-radius: 4px;
-      display: block;
-      margin-bottom: 1rem;
-      width: 100px;
-
-      @include d.desktop {
-        width: 150px;
-      }
-    }
 
     &__company__name {
       font-size: 2rem;

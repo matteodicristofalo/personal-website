@@ -27,20 +27,14 @@ export function Jobs() {
 
 const jobs = [
   {
-    company: {
-      name: "Gucci",
-      logo: "/gucci.jpg",
-    },
+    company: "Gucci",
     role: "Frontend Developer",
     period: "2022 - now",
     description:
       "I've contributed to key projects such as developing the e-commerce with a primary focus on the Product Detail Page, to the development of the orchestration layer for a microfrontend architecture and to a Design System library to ensure consistency across all Gucci Digital products. Working and collaborating in a dynamic, cross-functional environment, managing codebases shared among dozens of developers ensuring high-quality development standards.",
   },
   {
-    company: {
-      name: "Pharmap",
-      logo: "/pharmap.jpg",
-    },
+    company: "Pharmap",
     role: "Fullstack Developer",
     period: "2021 - 2022",
     description:
