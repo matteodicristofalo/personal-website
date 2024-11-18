@@ -1,0 +1,50 @@
+@use "../../mixins/display.scss" as d;
+
+.about__paragraph {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.interests {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin: 5rem 0 2.5rem 0;
+  }
+
+  .interest {
+    max-width: 350px;
+
+    &__media {
+      aspect-ratio: 3 / 4;
+      background: lightgray;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 1.5rem 0 1rem 0;
+    }
+
+    &__description {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  @include d.desktop {
+    flex-direction: row;
+    gap: 5rem;
+
+    &__title {
+      margin: 7.5rem 0;
+    }
+  }
+}
