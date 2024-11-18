@@ -13,7 +13,7 @@ export function Skills() {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const height = useTransform(scrollYProgress, [0, 0.9], [50, 0]);
+  const height = useTransform(scrollYProgress, [0, 0.8], [50, 0]);
 
   return (
     <>
