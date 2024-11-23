@@ -19,11 +19,10 @@
 
   .interest {
     max-width: 350px;
+    flex: 1;
 
-    &__media {
+    &__carousel__container {
       aspect-ratio: 3 / 4;
-      background: lightgray;
-      border-radius: 4px;
       width: 100%;
     }
 
@@ -47,4 +46,11 @@
       margin: 7.5rem 0;
     }
   }
+}
+
+.image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
