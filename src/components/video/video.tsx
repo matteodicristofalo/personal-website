@@ -25,6 +25,7 @@ export function Video({ src, play, mute, onClick }: Props) {
       <video
         ref={ref}
         src={src}
+        playsInline
         loop
         muted={mute}
         onClick={onClick}
