@@ -32,9 +32,9 @@ export function Video({ src, play, mute, onClick }: Props) {
         className={styles["video"]}
       />
 
-      <div className={styles["video__icon"]}>
+      <button type="button" className={styles["video__icon"]} onClick={onClick}>
         {mute ? <MuteIcon /> : <SoundIcon />}
-      </div>
+      </button>
     </div>
   );
 }
