@@ -1,6 +1,8 @@
+"use client";
+
 import { Section } from "@/components/section/section";
-import { SplitTextRotate } from "@/libs/text-animations/components/split-text-rotate/split-text-rotate";
-import { SplitTextReveal } from "@/libs/text-animations/components/split-text-reveal/split-text-reveal";
+import { SplitTextRotate } from "@matteodicristofalo/text-animations";
+import { SplitTextReveal } from "@matteodicristofalo/text-animations";
 import styles from "./contacts.module.scss";
 
 export function Contacts() {

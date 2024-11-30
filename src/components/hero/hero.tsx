@@ -1,4 +1,6 @@
-import { SplitTextReveal } from "@/libs/text-animations/components/split-text-reveal/split-text-reveal";
+"use client";
+
+import { SplitTextReveal } from "@matteodicristofalo/text-animations";
 import styles from "./hero.module.scss";
 
 export function Hero() {

@@ -7,7 +7,7 @@ import { Section } from "@/components/section/section";
 import { Carousel } from "../carousel/carousel";
 import styles from "./about.module.scss";
 import { Video } from "../video/video";
-import { SplitTextReveal } from "@/libs/text-animations/components/split-text-reveal/split-text-reveal";
+import { SplitTextReveal } from "@matteodicristofalo/text-animations";
 
 export function About() {
   const memoizedAboutRevealOptions = useMemo(() => ({ stagger: 0.0025 }), []);

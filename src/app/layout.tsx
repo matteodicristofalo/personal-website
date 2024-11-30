@@ -4,6 +4,7 @@ import { ReactLenis } from "@/libs/lenis";
 import { Header } from "@/components/header/header";
 import clsx from "clsx";
 import "./globals.css";
+import "@matteodicristofalo/text-animations/index.css";
 
 const durer = localFont({
   src: "./fonts/durer.woff2",

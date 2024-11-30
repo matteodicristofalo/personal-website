@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { SplitTextReveal } from "@/libs/text-animations/components/split-text-reveal/split-text-reveal";
+import { SplitTextReveal } from "@matteodicristofalo/text-animations";
 import styles from "./introduction.module.scss";
 
 export function Introduction() {
