@@ -5,7 +5,6 @@
   margin-bottom: 5rem;
 
   .skill {
-    opacity: 0;
     padding-bottom: 1rem;
     padding-right: 1rem;
     transition: opacity 1s ease-out var(--var-delay);
@@ -13,10 +12,6 @@
 
     &__container {
       position: relative;
-    }
-
-    &.animate {
-      opacity: 1;
     }
 
     &__number {

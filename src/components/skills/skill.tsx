@@ -1,9 +1,8 @@
 "use client";
 
-import { useMemo, useRef } from "react";
-import { useIntersectionObserver } from "@/libs/text-animations/hooks/use-intersection-observer";
-import clsx from "clsx";
+import { SplitTextReveal } from "@/libs/text-animations/components/split-text-reveal/split-text-reveal";
 import styles from "./skills.module.scss";
+import { useMemo } from "react";
 
 export function Skill({
   number,
@@ -16,19 +15,24 @@ export function Skill({
   description: string;
   revealDelay: number;
 }) {
-  const ref = useRef(null);
-  const memoizedOptions = useMemo(() => ({ once: false, threshold: 0.75 }), []);
-  const isInView = useIntersectionObserver(ref, memoizedOptions);
+  const memoizedRevealOptions = useMemo(() => ({ stagger: 0.0075 }), []);
 
   return (
     <div
-      ref={ref}
-      className={clsx(styles["skill"], { [styles["animate"]]: isInView })}
+      className={styles["skill"]}
       style={{ "--var-delay": `${revealDelay}s` } as React.CSSProperties}
     >
       <span className={styles["skill__number"]}>{number}</span>
-      <h4 className={styles["skill__title"]}>{title}</h4>
-      <p className={styles["skill__description"]}>{description}</p>
+      <h4 className={styles["skill__title"]}>
+        <SplitTextReveal text={title} />
+      </h4>
+      <p className={styles["skill__description"]}>
+        <SplitTextReveal
+          text={description}
+          splitType="word"
+          revealOptions={memoizedRevealOptions}
+        />
+      </p>
     </div>
   );
 }
