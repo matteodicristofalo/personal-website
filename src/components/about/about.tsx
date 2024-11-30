@@ -2,13 +2,17 @@
 
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Section } from "@/components/section/section";
 import { Carousel } from "../carousel/carousel";
 import styles from "./about.module.scss";
 import { Video } from "../video/video";
+import { SplitTextReveal } from "@/libs/text-animations/components/split-text-reveal/split-text-reveal";
 
 export function About() {
+  const memoizedAboutRevealOptions = useMemo(() => ({ stagger: 0.0025 }), []);
+  const memoizedInterestRevealOptions = useMemo(() => ({ stagger: 0.005 }), []);
+
   const [activeVideo, setActiveVideo] = useState(0);
   const [muted, setMuted] = useState(true);
 
@@ -27,16 +31,20 @@ export function About() {
   ));
 
   return (
-    <Section number="03" title="About">
+    <Section id="about" number="03" title="About">
       <div className="grid">
         <div className="col-12 col-lg-6 start-lg-3">
           <p className={styles["about__paragraph"]}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+            <SplitTextReveal
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
             tenetur? Pariatur nemo minima iste, numquam reprehenderit beatae
             eligendi! In aperiam aspernatur deserunt ab illo odio quam, nemo
             corrupti nesciunt fugiat. Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Maiores, tenetur? Pariatur nemo minima iste,
-            numquam reprehenderit beatae eligendi!
+            numquam reprehenderit beatae eligendi!"
+              splitType="word"
+              revealOptions={memoizedAboutRevealOptions}
+            />
           </p>
         </div>
       </div>
@@ -52,11 +60,15 @@ export function About() {
           <div className={styles["interest__carousel__container"]}>
             <Carousel slides={[]} />
           </div>
-          <div className={styles["interest__title"]}>Music</div>
+          <div className={styles["interest__title"]}>
+            <SplitTextReveal text="Music" />
+          </div>
           <div className={styles["interest__description"]}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            tenetur? Pariatur nemo minima iste, numquam reprehenderit beatae
-            eligendi!
+            <SplitTextReveal
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, tenetur? Pariatur nemo minima iste, numquam reprehenderit beatae eligendi!"
+              splitType="word"
+              revealOptions={memoizedInterestRevealOptions}
+            />
           </div>
         </div>
 
@@ -64,11 +76,15 @@ export function About() {
           <div className={styles["interest__carousel__container"]}>
             <Carousel slides={fashionSlides} />
           </div>
-          <div className={styles["interest__title"]}>Fashion</div>
+          <div className={styles["interest__title"]}>
+            <SplitTextReveal text="Fashion" />
+          </div>
           <div className={styles["interest__description"]}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            tenetur? Pariatur nemo minima iste, numquam reprehenderit beatae
-            eligendi!
+            <SplitTextReveal
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, tenetur? Pariatur nemo minima iste, numquam reprehenderit beatae eligendi!"
+              splitType="word"
+              revealOptions={memoizedInterestRevealOptions}
+            />
           </div>
         </div>
 
@@ -79,11 +95,15 @@ export function About() {
               slides={partySlides}
             />
           </div>
-          <div className={styles["interest__title"]}>Party</div>
+          <div className={styles["interest__title"]}>
+            <SplitTextReveal text="Party" />
+          </div>
           <div className={styles["interest__description"]}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            tenetur? Pariatur nemo minima iste, numquam reprehenderit beatae
-            eligendi!
+            <SplitTextReveal
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, tenetur? Pariatur nemo minima iste, numquam reprehenderit beatae eligendi!"
+              splitType="word"
+              revealOptions={memoizedInterestRevealOptions}
+            />
           </div>
         </div>
       </div>
@@ -93,12 +113,12 @@ export function About() {
 
 const outfitImages = [
   {
-    src: "/wales-bonner-outfit.jpg",
-    alt: "outfit with adidas wales bonner",
-  },
-  {
     src: "/gucci-gazelle-outfit.jpg",
     alt: "outfit with gucci gazelle",
+  },
+  {
+    src: "/wales-bonner-outfit.jpg",
+    alt: "outfit with adidas wales bonner",
   },
   {
     src: "/gucci-loafer-outfit.jpg",
