@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { ReactLenis } from "@/libs/lenis";
 import { Header } from "@/components/header/header";
 import clsx from "clsx";
-import "./globals.css";
+import "./globals.scss";
 import "@matteodicristofalo/text-animations/index.css";
 
 const durer = localFont({

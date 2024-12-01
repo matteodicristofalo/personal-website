@@ -1,0 +1,74 @@
+@use "./display.scss" as *;
+
+$grid-columns: 12;
+
+$grid-breakpoints: (
+  xs: 0,
+  md: $tablet-width,
+  lg: $desktop-width,
+  xl: $desktop-xl-width,
+);
+
+$paddings-breakpoints: (
+  xs: 16px,
+  md: 32px,
+  lg: 64px,
+  xl: 64px,
+);
+
+@mixin generate-columns(
+  $columns: $grid-columns,
+  $breakpoints: $grid-breakpoints
+) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: "-#{$breakpoint}";
+
+    @include media-query($breakpoint, $breakpoints) {
+      @for $i from 1 through $columns {
+        .col#{$infix}-#{$i} {
+          grid-column: auto / span $i;
+        }
+      }
+
+      @for $i from 1 through ($columns - 1) {
+        .start#{$infix}-#{$i} {
+          grid-column-start: $i;
+        }
+      }
+    }
+  }
+}
+
+@mixin generate-paddings($breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $horizontal-padding: map-get($paddings-breakpoints, $breakpoint);
+
+    @include media-query($breakpoint, $breakpoints) {
+      padding: 0 $horizontal-padding;
+    }
+  }
+}
+
+@mixin media-query($name, $breakpoints) {
+  $min: map-get($breakpoints, $name);
+
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $desktop-xl-width;
+
+  @include generate-paddings();
+}
+
+.grid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat($grid-columns, 1fr);
+
+  @include generate-columns();
+}
