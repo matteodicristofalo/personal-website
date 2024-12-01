@@ -9,23 +9,45 @@
 
   &__name {
     bottom: 0;
-    font-family: var(--font-durer);
-    font-size: calc(100vw / 12);
+    left: 0;
+    overflow: hidden;
     position: absolute;
-    text-align: center;
-    text-transform: uppercase;
+    white-space: nowrap;
     width: 100%;
+
+    &__span {
+      animation: 10s slide linear infinite;
+      display: inline-block;
+      font-family: var(--font-rhosyn);
+      font-size: 6rem;
+      padding-left: 2.5rem;
+      text-transform: uppercase;
+
+      @include d.desktop {
+        font-size: 12rem;
+        padding-left: 5rem;
+      }
+    }
   }
 
   &__image {
     aspect-ratio: 3 / 4;
     background: lightgray;
     width: 300px;
-    animation: anim 0.5s ease-in forwards;
+    animation: scale 0.5s ease-in forwards;
   }
 }
 
-@keyframes anim {
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scale {
   from {
     opacity: 0;
     transform: scale(0.9);

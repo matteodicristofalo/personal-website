@@ -6,9 +6,9 @@ import clsx from "clsx";
 import "./globals.css";
 import "@matteodicristofalo/text-animations/index.css";
 
-const durer = localFont({
-  src: "./fonts/durer.woff2",
-  variable: "--font-durer",
+const rhosyn = localFont({
+  src: "./fonts/rhosyn.woff2",
+  variable: "--font-rhosyn",
 });
 
 const gnarly = localFont({
@@ -20,10 +20,6 @@ const gnarly = localFont({
     {
       path: "./fonts/gnarly-semibold.woff2",
       weight: "500",
-    },
-    {
-      path: "./fonts/gnarly-black.woff2",
-      weight: "700",
     },
   ],
   variable: "--font-gnarly",
@@ -41,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(durer.variable, gnarly.variable)}>
+      <body className={clsx(rhosyn.variable, gnarly.variable)}>
         <ReactLenis root>
           <Header />
           <main>{children}</main>
