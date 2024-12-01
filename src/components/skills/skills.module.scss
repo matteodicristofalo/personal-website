@@ -4,6 +4,11 @@
   gap: 2rem;
   margin-bottom: 5rem;
 
+  &__section__container {
+    --section-background-color: var(--darker-background-color);
+    --section-foreground-color: var(--darker-foreground-color);
+  }
+
   .skill {
     padding-bottom: 1rem;
     padding-right: 1rem;

@@ -16,7 +16,7 @@ export function Skills() {
   const ref = useRef(null);
 
   return (
-    <>
+    <div className={styles["skills__section__container"]}>
       <Section ref={ref} id="skills" number="02" title="Skills">
         <div className={clsx("grid", styles["skills"])}>
           {skills.map((skill, i) => (
@@ -35,7 +35,7 @@ export function Skills() {
       </Section>
 
       <Shape containerRef={ref} />
-    </>
+    </div>
   );
 }
 

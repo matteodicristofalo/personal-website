@@ -1,8 +1,8 @@
 :root {
   --background-color: white;
-  --foreground-color: black;
-  --darker-background-color: #fdf2ed;
-  --darker-foreground-color: black;
+  --foreground-color: #1D1D1B;
+  --darker-background-color: #fff7ed;
+  --darker-foreground-color: #1D1D1B;
   --hf-background-color: black;
   --hf-foreground-color: white;
 }
