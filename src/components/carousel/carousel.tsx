@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, ReactNode, useEffect } from "react";
-import useEmblaCarousel from "embla-carousel-react";
 import { EmblaOptionsType } from "embla-carousel";
-import styles from "./carousel.module.scss";
+import useEmblaCarousel from "embla-carousel-react";
 import clsx from "clsx";
+import styles from "./carousel.module.scss";
 
 type Props = {
   slides: ReactNode[];

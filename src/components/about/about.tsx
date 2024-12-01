@@ -5,9 +5,9 @@
 import { useMemo, useState } from "react";
 import { Section } from "@/components/section/section";
 import { Carousel } from "../carousel/carousel";
-import styles from "./about.module.scss";
 import { Video } from "../video/video";
 import { SplitTextReveal } from "@matteodicristofalo/text-animations";
+import styles from "./about.module.scss";
 
 export function About() {
   const memoizedAboutRevealOptions = useMemo(() => ({ stagger: 0.0025 }), []);
