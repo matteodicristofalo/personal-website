@@ -36,12 +36,7 @@ export function About() {
         <div className="col-12 col-lg-6 start-lg-3">
           <p className={styles["about__paragraph"]}>
             <SplitTextReveal
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            tenetur? Pariatur nemo minima iste, numquam reprehenderit beatae
-            eligendi! In aperiam aspernatur deserunt ab illo odio quam, nemo
-            corrupti nesciunt fugiat. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Maiores, tenetur? Pariatur nemo minima iste,
-            numquam reprehenderit beatae eligendi!"
+              text="I'm a 26 yo originally from Palermo. My passion for coding started at high school where I studied IT. After high school I got a degree in Computer Science at the University of Palermo. Then I moved to Florence to further my career in the tech industry. I've always been passionate about design in all its forms, this love for design led me to frontend development, where I can combine creativity with functionality. For me, great design is about simplicity, usability, and creating seamless interactions. I’m constantly exploring new trends and techniques to craft clean, intuitive interfaces that not only look great but also enhance the user experience."
               splitType="word"
               revealOptions={memoizedAboutRevealOptions}
             />
@@ -57,15 +52,22 @@ export function About() {
 
       <div className={styles["interests"]}>
         <div className={styles["interest"]}>
-          <div className={styles["interest__carousel__container"]}>
-            <Carousel slides={[]} />
-          </div>
+          <a
+            href="https://open.spotify.com/playlist/37i9dQZF1FalrNvKGFFiID?si=36e00b3bb2a545fc"
+            target="_blank"
+          >
+            <img
+              src="/spotify-wrapped.jpg"
+              alt="Spotify wrapped"
+              className={styles["image"]}
+            />
+          </a>
           <div className={styles["interest__title"]}>
             <SplitTextReveal text="Music" />
           </div>
           <div className={styles["interest__description"]}>
             <SplitTextReveal
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, tenetur? Pariatur nemo minima iste, numquam reprehenderit beatae eligendi!"
+              text="Music is my constant companion, whether I'm working, relaxing, or on the move, it has the power to inspire and energize me in every moment. I enjoy all genres really, from jazz to hip-hop to house"
               splitType="word"
               revealOptions={memoizedInterestRevealOptions}
             />
@@ -81,7 +83,7 @@ export function About() {
           </div>
           <div className={styles["interest__description"]}>
             <SplitTextReveal
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, tenetur? Pariatur nemo minima iste, numquam reprehenderit beatae eligendi!"
+              text="I need to confess... I'm a fashion victim. I love experimenting with different styles, For me, fashion is a form of self-expression."
               splitType="word"
               revealOptions={memoizedInterestRevealOptions}
             />
@@ -100,7 +102,7 @@ export function About() {
           </div>
           <div className={styles["interest__description"]}>
             <SplitTextReveal
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, tenetur? Pariatur nemo minima iste, numquam reprehenderit beatae eligendi!"
+              text="I'm passionate about parties, especially when it comes to House, Tech House, and Techno music. I'm often out during weekends, and I recently had the chance to experience ADE."
               splitType="word"
               revealOptions={memoizedInterestRevealOptions}
             />
