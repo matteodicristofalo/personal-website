@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@matteodicristofalo/text-animations": "^1.0.1",
+    "@matteodicristofalo/text-animations": "^1.0.3",
     "@studio-freight/react-lenis": "^0.0.47",
     "clsx": "^2.1.1",
     "embla-carousel": "^8.5.1",

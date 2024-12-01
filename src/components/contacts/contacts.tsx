@@ -1,5 +1,3 @@
-"use client";
-
 import { Section } from "@/components/section/section";
 import { SplitTextRotate } from "@matteodicristofalo/text-animations";
 import { SplitTextReveal } from "@matteodicristofalo/text-animations";

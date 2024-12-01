@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import styles from "./hero.module.scss";
 
 export function Hero() {
