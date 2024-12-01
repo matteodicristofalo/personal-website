@@ -1,27 +1,19 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { Section } from "@/components/section/section";
 import { Skill } from "./skill";
+import { ShapeProps } from "../shape/shape";
+import dynamic from "next/dynamic";
 import clsx from "clsx";
 import styles from "./skills.module.scss";
 
+const Shape = dynamic<ShapeProps>(() => import("../shape/shape"), {
+  ssr: false,
+});
+
 export function Skills() {
-  const [hasBeenMounted, setHasBeenMounted] = useState(false);
-
   const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const height = useTransform(scrollYProgress, [0, 0.8], [50, 0]);
-
-  useEffect(() => {
-    setHasBeenMounted(true);
-  }, []);
 
   return (
     <>
@@ -42,12 +34,7 @@ export function Skills() {
         </div>
       </Section>
 
-      <motion.div
-        style={{ height: hasBeenMounted ? height : 0 }}
-        className={styles["shape__container"]}
-      >
-        <div className={styles["shape"]}></div>
-      </motion.div>
+      <Shape containerRef={ref} />
     </>
   );
 }
