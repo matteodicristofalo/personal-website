@@ -20,12 +20,8 @@
   &__image {
     aspect-ratio: 3 / 4;
     background: lightgray;
-    width: 200px;
+    width: 300px;
     animation: anim 0.5s ease-in forwards;
-
-    @include d.desktop {
-      width: 300px;
-    }
   }
 }
 

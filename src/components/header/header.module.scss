@@ -42,6 +42,7 @@
     }
 
     &__items {
+      align-items: center;
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -52,10 +53,6 @@
 
       @include d.desktop {
         padding: 0 3rem;
-      }
-
-      @include d.desktop-xl {
-        align-items: center;
       }
     }
 

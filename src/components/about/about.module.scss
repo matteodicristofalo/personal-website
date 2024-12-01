@@ -1,8 +1,12 @@
 @use "../../mixins/display.scss" as d;
 
 .about__paragraph {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 2rem;
+
+  @include d.desktop {
+    font-size: 1.2rem;
+  }
 }
 
 .interests {
