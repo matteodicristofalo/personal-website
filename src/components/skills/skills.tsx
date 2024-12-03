@@ -17,18 +17,14 @@ export function Skills() {
 
   return (
     <div className={styles["skills__section__container"]}>
-      <Section ref={ref} id="skills" number="02" title="Skills">
+      <Section ref={ref} id="skills" title="Skills">
         <div className={clsx("grid", styles["skills"])}>
           {skills.map((skill, i) => (
             <div
               className={clsx("col-12 col-lg-3", styles["skill__container"])}
               key={i}
             >
-              <Skill
-                number={skillNumber(i + 1)}
-                title={skill.title}
-                description={skill.description}
-              />
+              <Skill title={skill.title} description={skill.description} />
             </div>
           ))}
         </div>
@@ -38,8 +34,6 @@ export function Skills() {
     </div>
   );
 }
-
-const skillNumber = (index: number) => (index < 10 ? `0${index}` : `${index}`);
 
 const skills = [
   {

@@ -5,7 +5,7 @@ import styles from "./job.module.scss";
 export function Jobs() {
   return (
     <div className={styles["job__section__container"]}>
-      <Section id="jobs" number="01" title="Jobs">
+      <Section id="jobs" title="Jobs">
         {jobs.map((job, i) => (
           <Job key={i} {...job} />
         ))}

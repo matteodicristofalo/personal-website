@@ -3,7 +3,6 @@ import styles from "./section.module.scss";
 import { forwardRef } from "react";
 
 type SectionProps = {
-  number: string;
   title: string;
   subtitle?: string;
   minHeight?: boolean;
@@ -12,7 +11,7 @@ type SectionProps = {
 };
 
 export const Section = forwardRef<HTMLElement, SectionProps>(function Section(
-  { number, title, subtitle, minHeight = true, id, children },
+  { title, subtitle, minHeight = true, id, children },
   ref
 ) {
   return (
@@ -24,10 +23,6 @@ export const Section = forwardRef<HTMLElement, SectionProps>(function Section(
     >
       <div className="container">
         <div className={clsx("grid", styles["section__header"])}>
-          <div className="col-12 col-lg-2">
-            <span className={styles["section__header__number"]}>{number}/</span>
-          </div>
-
           <div className="col-12 col-lg-3">
             <h2 className={styles["section__header__title"]}>{title}</h2>
           </div>

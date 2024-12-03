@@ -8,7 +8,6 @@ export function Contacts() {
     <div className={styles["contacts__section__container"]}>
       <Section
         id="contacts"
-        number="04"
         title="Want to work toghether?"
         subtitle="Send me a message"
         minHeight={false}

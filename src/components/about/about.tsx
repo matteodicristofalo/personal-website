@@ -29,7 +29,7 @@ export function About() {
   ));
 
   return (
-    <Section id="about" number="03" title="About">
+    <Section id="about" title="About">
       <div className="grid">
         <div className="col-12 col-lg-6 start-lg-3">
           <p className={styles["about__paragraph"]}>
