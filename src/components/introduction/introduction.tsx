@@ -12,7 +12,7 @@ export function Introduction() {
       <p className={styles["introduction__paragraph"]}>
         <SplitTextReveal
           splitType="word"
-          text="Ciao 👋🏼 - I'm a Frontend Developer based in Florence, I build creative websites that engage and inspire."
+          text="Ciao 👋🏼 - I'm a Software Engineer based in Florence, I build creative websites that engage and inspire."
           revealOptions={memoizedRevealOptions}
         />
       </p>

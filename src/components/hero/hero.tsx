@@ -1,3 +1,4 @@
+import { Image } from "../image/image";
 import styles from "./hero.module.scss";
 
 export function Hero() {
@@ -8,7 +9,7 @@ export function Hero() {
         <span className={styles["hero__name__span"]}>Matteo Di Cristofalo</span>
       </h2>
 
-      <img
+      <Image
         src="/me.jpg"
         alt="Matteo Di Cristofalo"
         className={styles["hero__image"]}
