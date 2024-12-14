@@ -1,0 +1,36 @@
+@use "@/mixins/display.scss" as d;
+
+.tabs {
+  list-style: none;
+  margin: 3rem 0;
+  transition: transform 0.5s ease-out;
+  white-space: nowrap;
+
+  &__wrapper {
+    overflow: hidden;
+  }
+
+  .tab {
+    display: inline-block;
+    width: 50%;
+
+    button {
+      all: unset;
+      cursor: pointer;
+      font-size: 3rem;
+      opacity: 0.5;
+      text-align: center;
+      width: 100%;
+
+      @include d.desktop {
+        font-size: 7.5rem;
+      }
+    }
+
+    &.is-active {
+      button {
+        opacity: 1;
+      }
+    }
+  }
+}

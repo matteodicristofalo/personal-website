@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./video.module.scss";
 
 type Props = {
@@ -36,6 +36,19 @@ export function Video({ src, play, mute, onClick }: Props) {
         {mute ? <MuteIcon /> : <SoundIcon />}
       </button>
     </div>
+  );
+}
+
+export function AutoPlayVideo({ src }: { src: string }) {
+  const [muted, setMuted] = useState(true);
+
+  return (
+    <Video
+      src={src}
+      play={true}
+      mute={muted}
+      onClick={() => setMuted(!muted)}
+    />
   );
 }
 

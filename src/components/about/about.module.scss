@@ -1,4 +1,4 @@
-@use "../../mixins/display.scss" as d;
+@use "@/mixins/display.scss" as d;
 
 .about__paragraph {
   font-size: 1.1rem;
@@ -10,58 +10,47 @@
 }
 
 .interests {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  justify-content: center;
-
   &__title {
     font-size: 1.75rem;
     font-weight: 500;
     margin: 5rem 0 2.5rem 0;
   }
+}
 
-  .interest {
-    max-width: 350px;
-    flex: 1;
+.interest {
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
 
-    .image {
-      aspect-ratio: 3 / 4;
-      display: block;
-      object-fit: cover;
-      width: 100%;
+  &__copy {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+
+    @include d.desktop {
+      font-size: 1.2rem;
+      line-height: 1.75rem;
     }
+  }
 
-    &__carousel__container {
-      aspect-ratio: 3 / 4;
-      width: 100%;
+  &__media {
+    aspect-ratio: 3 / 4;
+    width: 100%;
 
-      .image {
-        display: block;
-        height: 100%;
-        object-fit: cover;
-        width: 100%;
-      }
-    }
-
-    &__title {
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin: 1.5rem 0 1rem 0;
-    }
-
-    &__description {
-      font-size: 1rem;
-      line-height: 1.5rem;
+    @include d.desktop {
+      width: 75%;
     }
   }
 
   @include d.desktop {
-    flex-direction: row;
-    gap: 5rem;
-
-    &__title {
-      margin: 7.5rem 0;
-    }
+    gap: 0;
+    grid-template-columns: 1fr 1fr;
   }
+}
+
+.image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
