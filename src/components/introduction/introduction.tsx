@@ -6,7 +6,7 @@ import styles from "./introduction.module.scss";
 
 export function Introduction() {
   const memoizedRevealOptions = useMemo(
-    () => ({ stagger: 0.001, threshold: 0.5 }),
+    () => ({ stagger: 0.001, threshold: 0.9 }),
     []
   );
 
