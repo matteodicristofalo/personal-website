@@ -6,11 +6,6 @@ import clsx from "clsx";
 import "./globals.css";
 import "@matteodicristofalo/text-animations/index.css";
 
-const rhosyn = localFont({
-  src: "./fonts/rhosyn.woff2",
-  variable: "--font-rhosyn",
-});
-
 const gnarly = localFont({
   src: [
     {
@@ -37,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(rhosyn.variable, gnarly.variable)}>
+      <body className={clsx(gnarly.variable)}>
         <ReactLenis root>
           <Header />
           <main>{children}</main>
