@@ -5,7 +5,10 @@ import { SplitTextReveal } from "@matteodicristofalo/text-animations";
 import styles from "./introduction.module.scss";
 
 export function Introduction() {
-  const memoizedRevealOptions = useMemo(() => ({ stagger: 0.001 }), []);
+  const memoizedRevealOptions = useMemo(
+    () => ({ stagger: 0.001, threshold: 0.5 }),
+    []
+  );
 
   return (
     <section className={styles["introduction"]}>

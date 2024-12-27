@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@matteodicristofalo/text-animations':
-        specifier: ^1.0.3
-        version: 1.0.3(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)
+        specifier: ^1.1.0
+        version: 1.1.0(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)
       '@studio-freight/react-lenis':
         specifier: ^0.0.47
         version: 0.0.47(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)
@@ -199,8 +199,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@matteodicristofalo/text-animations@1.0.3':
-    resolution: {integrity: sha512-ihxk9DXWGuKU5Jen+FbOTi8G4UYIlzT0/0pkIimi3hFGjpw8Sn4cVV9ea8wbUBOgBYq+PcWHRXi61hCa0Yc0OQ==}
+  '@matteodicristofalo/text-animations@1.1.0':
+    resolution: {integrity: sha512-aeo2e5PdZUgYToE38xfrqSxKCT1MYxeJI8cxpsIREwM9DpUjPPImTpxltwAlEBuay7evsQ7ZsDFANUcsDp0xow==}
     peerDependencies:
       react: ^18.3.1
       react-dom: ^18.3.1
@@ -1707,7 +1707,7 @@ snapshots:
   '@img/sharp-win32-x64@0.33.5':
     optional: true
 
-  '@matteodicristofalo/text-animations@1.0.3(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)':
+  '@matteodicristofalo/text-animations@1.1.0(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)':
     dependencies:
       clsx: 2.1.1
       react: 19.0.0-rc-02c0e824-20241028

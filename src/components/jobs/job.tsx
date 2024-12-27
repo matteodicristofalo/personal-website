@@ -16,7 +16,10 @@ type JobProps = {
 };
 
 export function Job({ company, role, period, description }: JobProps) {
-  const memoizedRevealOptions = useMemo(() => ({ stagger: 0.001 }), []);
+  const memoizedRevealOptions = useMemo(
+    () => ({ stagger: 0.001, threshold: 0.5 }),
+    []
+  );
 
   return (
     <div className={clsx("grid", styles["job"])}>
