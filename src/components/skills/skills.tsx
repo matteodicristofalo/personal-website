@@ -62,19 +62,9 @@ const skills = [
       "Experienced in server-side rendering and static site generation for fast, scalable web apps.",
   },
   {
-    title: "React testing library",
+    title: "Git",
     description:
-      "Experienced in writing unit tests with React Testing Library for reliable, maintainable code.",
-  },
-  {
-    title: "Playwright",
-    description:
-      "Experienced in end-to-end testing with Playwright for cross-browser automation, reliable tests.",
-  },
-  {
-    title: "Rollup",
-    description:
-      "Experienced in using Rollup for bundling JavaScript and building optimized npm packages",
+      "Experienced in using Git from the CLI to manage version control in large codebases shared among dozens of developers.",
   },
   {
     title: "Docker",
@@ -82,8 +72,8 @@ const skills = [
       "Experienced in using Docker to containerize applications, ensuring consistent development, testing, and deployments.",
   },
   {
-    title: "Git",
+    title: "Rollup",
     description:
-      "Experienced in using Git from the CLI to manage version control in large codebases shared among dozens of developers.",
+      "Experienced in using Rollup for bundling JavaScript and building optimized npm packages",
   },
 ];
