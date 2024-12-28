@@ -23,12 +23,12 @@ export const Section = forwardRef<HTMLElement, SectionProps>(function Section(
     >
       <div className="container">
         <div className={clsx("grid", styles["section__header"])}>
-          <div className="col-12 col-lg-3">
+          <div className="col-12 col-lg-4">
             <h2 className={styles["section__header__title"]}>{title}</h2>
           </div>
 
           {subtitle && (
-            <div className="col-12 col-lg-3">
+            <div className="col-12 col-lg-4">
               <h2 className={styles["section__header__subtitle"]}>
                 {subtitle}
               </h2>

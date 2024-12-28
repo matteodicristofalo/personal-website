@@ -18,8 +18,9 @@
     &__span {
       animation: 10s slide linear infinite;
       display: inline-block;
-      font-weight: 400;
       font-size: 6rem;
+      font-weight: 400;
+      letter-spacing: -0.25rem;
       padding-left: 2.5rem;
       text-transform: uppercase;
 
@@ -32,7 +33,7 @@
 
   &__image {
     aspect-ratio: 3 / 4;
-    border-radius: 4px;
+    border-radius: 8px;
     width: 300px;
 
     @include d.desktop {

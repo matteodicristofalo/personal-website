@@ -17,7 +17,7 @@ export function Skills() {
 
   return (
     <div className={styles["skills__section__container"]}>
-      <Section ref={ref} id="skills" title="Skills">
+      <Section ref={ref} id="skills" title="Skills" minHeight={false}>
         <div className={clsx("grid", styles["skills"])}>
           {skills.map((skill, i) => (
             <div

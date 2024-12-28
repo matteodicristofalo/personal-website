@@ -13,7 +13,7 @@ export default function Shape({ containerRef }: ShapeProps) {
     offset: ["start end", "end start"],
   });
 
-  const height = useTransform(scrollYProgress, [0, 0.8], [50, 0]);
+  const height = useTransform(scrollYProgress, [0, 0.8], [25, 0]);
 
   return (
     <motion.div style={{ height }} className={styles["shape__container"]}>

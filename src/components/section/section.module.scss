@@ -24,7 +24,10 @@
       margin-bottom: 1rem;
 
       @include d.desktop {
+        font-size: 3rem;
+        line-height: 3rem;
         margin-bottom: 0;
+        max-width: 300px;
       }
     }
 
