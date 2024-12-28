@@ -1,4 +1,5 @@
 @use "@/mixins/display.scss" as d;
+@use "@/mixins/element.scss" as e;
 
 .tabs {
   list-style: none;
@@ -15,12 +16,15 @@
     width: 50%;
 
     button {
-      all: unset;
+      background: transparent;
+      border: 0;
+      color: inherit;
       cursor: pointer;
       font-size: 3rem;
       opacity: 0.5;
       text-align: center;
       width: 100%;
+      @include e.outline-on-focus;
 
       @include d.desktop {
         font-size: 6rem;

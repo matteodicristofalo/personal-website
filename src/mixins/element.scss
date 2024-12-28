@@ -1,0 +1,10 @@
+$outline-width: 3px;
+
+@mixin outline-on-focus {
+  outline: $outline-width solid #337eff;
+  outline-offset: -$outline-width;
+
+  &:not(:focus-visible) {
+    outline: 0;
+  }
+}

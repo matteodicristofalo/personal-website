@@ -1,4 +1,5 @@
 @use "@/mixins/display.scss" as d;
+@use "@/mixins/element.scss" as e;
 
 .contacts {
   display: flex;
@@ -18,6 +19,7 @@
     overflow-wrap: break-word;
     word-break: break-word;
     word-wrap: break-word;
+    @include e.outline-on-focus;
 
     span[class*="_container"] span::before {
       background: var(--section-background-color);
@@ -57,8 +59,10 @@
     margin: 0;
 
     &__link {
+      display: inline-block;
       font-size: 1rem;
       font-weight: 500;
+      @include e.outline-on-focus;
 
       @include d.desktop {
         font-size: 1.2rem;
