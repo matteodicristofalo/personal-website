@@ -34,6 +34,7 @@
     position: fixed;
     top: 0;
     transform: translateX(-100%);
+    visibility: hidden;
     width: 100dvw;
     will-change: transform, opacity;
     z-index: 2;
@@ -41,6 +42,7 @@
     &.is-open {
       transform: translateX(0);
       transition: transform 0.25s ease-out;
+      visibility: visible;
     }
 
     &__items {

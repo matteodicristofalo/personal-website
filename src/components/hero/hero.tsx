@@ -18,9 +18,13 @@ export function Hero() {
 
   return (
     <section ref={ref} className={styles["hero"]}>
-      <h2 className={styles["hero__name"]}>
-        <span className={styles["hero__name__span"]}>Matteo Di Cristofalo</span>
-        <span className={styles["hero__name__span"]}>Matteo Di Cristofalo</span>
+      <h2 className={styles["hero__name"]} aria-label="Matteo Di Cristofalo">
+        <span className={styles["hero__name__span"]} aria-hidden="true">
+          Matteo Di Cristofalo
+        </span>
+        <span className={styles["hero__name__span"]} aria-hidden="true">
+          Matteo Di Cristofalo
+        </span>
       </h2>
 
       <motion.div className={styles["hero__image"]} style={{ y }}>
