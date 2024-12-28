@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { SplitTextReveal } from "@matteodicristofalo/text-animations";
 import clsx from "clsx";
 import styles from "./job.module.scss";
+import Image from "next/image";
 
 type JobProps = {
   company: {
@@ -26,10 +27,12 @@ export function Job({ company, role, period, description }: JobProps) {
       <div
         className={clsx(styles["company__logo__container"], "col-12 col-lg-4")}
       >
-        <img
+        <Image
           className={styles["company__logo"]}
-          src={company.logo}
+          src={company.logo!}
           alt={company.name}
+          width={200}
+          height={200}
         />
       </div>
 

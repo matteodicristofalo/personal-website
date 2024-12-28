@@ -18,7 +18,7 @@ const jobs = [
   {
     company: {
       name: "Gucci",
-      logo: "gucci.jpg",
+      logo: "/gucci.jpg",
     },
     role: "Software Engineer",
     period: "2022 - now",
@@ -28,7 +28,7 @@ const jobs = [
   {
     company: {
       name: "Pharmap",
-      logo: "pharmap.jpg",
+      logo: "/pharmap.jpg",
     },
     role: "Software Engineer",
     period: "2021 - 2022",

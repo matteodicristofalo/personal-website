@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 "use client";
 
 import { useMemo, useState } from "react";
@@ -8,6 +6,9 @@ import { SplitTextReveal } from "@matteodicristofalo/text-animations";
 import { Tabs } from "./tabs/tabs";
 import { AutoPlayVideo } from "../video/video";
 import styles from "./about.module.scss";
+import Image from "next/image";
+import walesBonner from "@public/wales-bonner.jpeg";
+import paris from "@public/paris.jpeg";
 
 export function About() {
   const [activeTab, setActiveTab] = useState(0);
@@ -62,9 +63,11 @@ function FashionContent() {
   return (
     <div className={styles["interest"]}>
       <div className={styles["interest__media"]}>
-        <img
-          src="wales-bonner.jpeg"
+        <Image
+          src={walesBonner}
           alt="Adidas Wales Bonner"
+          fill
+          placeholder="blur"
           className={styles["image"]}
         />
       </div>
@@ -102,7 +105,13 @@ function TravelsContent() {
   return (
     <div className={styles["interest"]}>
       <div className={styles["interest__media"]}>
-        <img src="paris.jpeg" alt="Paris" className={styles["image"]} />
+        <Image
+          src={paris}
+          alt="Paris"
+          fill
+          placeholder="blur"
+          className={styles["image"]}
+        />
       </div>
 
       <div className={styles["interest__copy"]}>

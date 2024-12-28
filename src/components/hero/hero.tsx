@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
+import me from "@public/me.jpg";
 import styles from "./hero.module.scss";
 
 export function Hero() {
@@ -21,12 +23,15 @@ export function Hero() {
         <span className={styles["hero__name__span"]}>Matteo Di Cristofalo</span>
       </h2>
 
-      <motion.img
-        src="/me.jpg"
-        alt="Matteo Di Cristofalo"
-        className={styles["hero__image"]}
-        style={{ y }}
-      />
+      <motion.div className={styles["hero__image"]} style={{ y }}>
+        <Image
+          src={me}
+          alt="Matteo Di Cristofalo"
+          fill
+          priority
+          placeholder="blur"
+        />
+      </motion.div>
     </section>
   );
 }
