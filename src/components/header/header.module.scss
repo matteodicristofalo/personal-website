@@ -66,6 +66,7 @@
       color: inherit;
       cursor: pointer;
       display: inline-block;
+      font-family: inherit;
       font-size: 4rem;
       font-weight: 500;
       @include e.outline-on-focus;
